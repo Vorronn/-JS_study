@@ -34,6 +34,19 @@ function chooseExpenses() {
     }
 }
 
+function chooseOptExpenses(){
+    for(let i=0; i < 3; i++){
+        let a = prompt('Введите статью необязательных расходов в этом месяце','');
+            b = +prompt('Во сколько это обойдется','');
+        
+        if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length <50){
+            appData.optionalExpenses[a] = b;
+        } else {
+            i==;
+        }
+    } 
+}
+
 chooseExpenses();
 
 // let i = 0;
@@ -61,9 +74,11 @@ chooseExpenses();
 //         i--;
 //     }
 // } while (i < 2);
+function detectDayBudget() {
+    appData.moneyPerDay = (appData.budget / 30).toFixed();
+    alert('Бюджет на 1 день составил ' + appData.moneyPerDay);
+}
 
-appData.moneyPerDay = (appData.budget / 30).toFixed();
-alert('Бюджет на 1 день составил ' + appData.moneyPerDay);
 if (appData.moneyPerDay < 100) {
     console.log('Низкий уровень достатка');
 } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 300) {
