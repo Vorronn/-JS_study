@@ -36,13 +36,13 @@ function chooseExpenses() {
 
 function chooseOptExpenses(){
     for(let i=0; i < 3; i++){
-        let a = prompt('Введите статью необязательных расходов в этом месяце','');
+        let a = prompt('Введите статью необязательных расходов в этом месяце',''),
             b = +prompt('Во сколько это обойдется','');
         
         if((typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length <50){
             appData.optionalExpenses[a] = b;
         } else {
-            i==;
+            i--;
         }
     } 
 }
