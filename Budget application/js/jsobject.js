@@ -87,8 +87,26 @@ console.log(i);
 
 let arr8 = [4, 16, 2, 7, 1],
     intt = arr8.sort(compareNum);
-
+//Важная функция для сортировки имменно по числовым значениям
 function compareNum(a,b) {
     return a-b;
 }
 console.log(intt);
+
+// ООП in JavaScript
+//++++++++++++++++++++++++++++++++++++++++++++++++
+
+let soldier = {
+    health: 400,
+    amor: 100
+};
+
+let john = {
+    health: 100
+};
+
+john.__proto__=soldier;
+
+console.log(john);
+console.log(john.amor);
+
